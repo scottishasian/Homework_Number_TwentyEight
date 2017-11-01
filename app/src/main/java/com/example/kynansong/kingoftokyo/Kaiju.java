@@ -4,6 +4,7 @@ package com.example.kynansong.kingoftokyo;
  * Created by kynansong on 01/11/2017.
  */
 
+
 public abstract class Kaiju {
 
     private String name;
@@ -32,6 +33,11 @@ public abstract class Kaiju {
 
     public String getRoar() {
         return this.roar;
+    }
+
+    public void Attack(Vehicle type) {
+        type.damaged(this.attackValue);
+
     }
 
 }

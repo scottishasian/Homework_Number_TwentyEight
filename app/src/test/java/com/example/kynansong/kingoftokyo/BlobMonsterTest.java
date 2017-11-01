@@ -12,10 +12,12 @@ import com.example.kynansong.kingoftokyo.*;
 public class BlobMonsterTest {
 
     BlobMonster blobMonster;
+    ReliantRobin reliantRobin;
 
     @Before
     public void before() {
         blobMonster = new BlobMonster("Jeff",100, 20, "Miao");
+        reliantRobin = new ReliantRobin("Rocket Car", 100);
     }
 
     @Test
@@ -36,5 +38,11 @@ public class BlobMonsterTest {
     @Test
     public void getRoar() {
         assertEquals("Miao", blobMonster.getRoar());
+    }
+
+    @Test
+    public void canAttack() {
+        blobMonster.Attack(reliantRobin);
+        assertEquals(80, reliantRobin.getHealth());
     }
 }
