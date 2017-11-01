@@ -45,4 +45,9 @@ public class BlobMonsterTest {
         blobMonster.Attack(reliantRobin);
         assertEquals(80, reliantRobin.getHealth());
     }
+
+    @Test
+    public void canMove() {
+        assertEquals("I am slithering.", blobMonster.move());
+    }
 }
