@@ -22,4 +22,19 @@ public class BlobMonsterTest {
     public void hasName() {
         assertEquals("Jeff", blobMonster.getName());
     }
+
+    @Test
+    public void hasHealth() {
+        assertEquals(100, blobMonster.getHealth());
+    }
+
+    @Test
+    public void getAttackValue() {
+        assertEquals(20, blobMonster.getAttackValue());
+    }
+
+    @Test
+    public void getRoar() {
+        assertEquals("Miao", blobMonster.getRoar());
+    }
 }
