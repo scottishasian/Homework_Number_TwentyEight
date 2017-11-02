@@ -16,7 +16,7 @@ public class BicycleTest {
 
     @Before
     public void before() {
-        bicycle = new Bicycle("Axe Bike", 50);
+        bicycle = new Bicycle("Axe Bike", 50, 12);
         fishMonster = new FishMonster("Susan", 100, 12, " *** ");
     }
 
@@ -34,5 +34,11 @@ public class BicycleTest {
     public void isDamaged() {
         bicycle.damaged(fishMonster.getAttackValue());
         assertEquals(38, bicycle.getHealth());
+    }
+
+    @Test
+    public void canAttackKaiju() {
+        bicycle.attackKaiju(fishMonster);
+        assertEquals(88, fishMonster.getHealth());
     }
 }

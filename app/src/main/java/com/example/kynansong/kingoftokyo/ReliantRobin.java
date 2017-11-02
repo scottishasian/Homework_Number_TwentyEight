@@ -7,11 +7,13 @@ import Behaviour.VehicleAttack;
  */
 
 public class ReliantRobin extends Vehicle implements VehicleAttack{
-    public ReliantRobin(String type, int health) {
-        super(type, health);
+
+    public ReliantRobin(String type, int health, int attackValue) {
+        super(type, health, attackValue);
     }
 
-    public int attackKaiju() {
-        return 3;
+    public void attackKaiju(Kaiju kaiju) {
+        kaiju.isDamaged(getAttackValue());
+
     }
 }

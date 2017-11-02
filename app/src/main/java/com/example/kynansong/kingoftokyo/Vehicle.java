@@ -10,10 +10,12 @@ public abstract class Vehicle implements VehicleAttack {
 
     private String type;
     private int health;
+    private int attackValue;
 
-    public Vehicle (String type, int health) {
+    public Vehicle (String type, int health, int attackValue) {
         this.type = type;
         this.health = health;
+        this.attackValue = attackValue;
     }
 
     public String getType() {
@@ -24,12 +26,13 @@ public abstract class Vehicle implements VehicleAttack {
         return this.health;
     }
 
+    public int getAttackValue() {
+        return this.attackValue;
+    }
+
     public void damaged(int attackValue) {
         this.health -= attackValue;
     }
 
-    public void attackKaiju(Kaiju kaiju) {
-        kaiju.isDamaged(3);
 
-    }
 }

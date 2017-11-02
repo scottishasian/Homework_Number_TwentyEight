@@ -17,7 +17,7 @@ public class FishMonsterTest {
     @Before
     public void before() {
         fishMonster = new FishMonster("Susan",100, 12, " *** ");
-        bicycle = new Bicycle("Axe Bike", 50);
+        bicycle = new Bicycle("Axe Bike", 50, 12);
     }
 
     @Test
@@ -50,4 +50,11 @@ public class FishMonsterTest {
     public void canMove() {
         assertEquals("I am using splash.", fishMonster.move());
     }
+
+    @Test
+    public void canBeDamaged() {
+        bicycle.attackKaiju(fishMonster);
+        assertEquals(88, fishMonster.getHealth());
+    }
+
 }

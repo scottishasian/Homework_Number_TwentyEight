@@ -17,7 +17,7 @@ public class BlobMonsterTest {
     @Before
     public void before() {
         blobMonster = new BlobMonster("Jeff",100, 20, "Miao");
-        reliantRobin = new ReliantRobin("Rocket Car", 100);
+        reliantRobin = new ReliantRobin("Rocket Car", 100, 3);
     }
 
     @Test
