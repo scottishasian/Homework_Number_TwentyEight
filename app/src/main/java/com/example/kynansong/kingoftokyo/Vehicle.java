@@ -34,5 +34,9 @@ public abstract class Vehicle implements VehicleAttack {
         this.health -= attackValue;
     }
 
+    public void attackKaiju(Kaiju kaiju) {
+        kaiju.isDamaged(getAttackValue());
+
+    }
 
 }
