@@ -40,4 +40,8 @@ public abstract class Kaiju {
 
     }
 
+    public void isDamaged(int number) {
+        this.health -= number;
+    }
+
 }

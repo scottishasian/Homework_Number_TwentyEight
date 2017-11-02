@@ -1,6 +1,6 @@
 package com.example.kynansong.kingoftokyo;
 
-import Movement.Movement;
+import Behaviour.Movement;
 
 /**
  * Created by kynansong on 01/11/2017.

@@ -1,10 +1,12 @@
 package com.example.kynansong.kingoftokyo;
 
+import Behaviour.VehicleAttack;
+
 /**
  * Created by kynansong on 01/11/2017.
  */
 
-public abstract class Vehicle {
+public abstract class Vehicle implements VehicleAttack {
 
     private String type;
     private int health;
@@ -24,5 +26,10 @@ public abstract class Vehicle {
 
     public void damaged(int attackValue) {
         this.health -= attackValue;
+    }
+
+    public void attackKaiju(Kaiju kaiju) {
+        kaiju.isDamaged(3);
+
     }
 }

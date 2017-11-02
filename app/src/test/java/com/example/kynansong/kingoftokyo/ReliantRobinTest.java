@@ -35,4 +35,10 @@ public class ReliantRobinTest {
         reliantRobin.damaged(blobMonster.getAttackValue());
         assertEquals(80, reliantRobin.getHealth());
     }
+
+    @Test
+    public void canAttackKaiju() {
+        reliantRobin.attackKaiju(blobMonster);
+        assertEquals(97, blobMonster.getHealth());
+    }
 }
