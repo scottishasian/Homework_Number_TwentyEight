@@ -50,4 +50,10 @@ public class BlobMonsterTest {
     public void canMove() {
         assertEquals("I am slithering.", blobMonster.move());
     }
+
+    @Test
+    public void canBeDamaged() {
+        reliantRobin.attackKaiju(blobMonster);
+        assertEquals(97, blobMonster.getHealth());
+    }
 }
